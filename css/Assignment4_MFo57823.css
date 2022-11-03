@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+header {
+    margin: 1rem;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 1rem;
+}
+
+fieldset {
+    max-width: 600px;
+    min-height: 200px;
+}
+
+div {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+div > * {
+    flex: 1 1 200px ;
+    margin: 5px 5px;
+}
+
+span {
+    font-size: 13px;
+}
