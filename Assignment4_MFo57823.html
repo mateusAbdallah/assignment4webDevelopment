@@ -24,11 +24,11 @@
                 <legend>User and Video Data</legend>
                 <div>
                     <label for="fullName">Full Name</label>
-                    <input type="text" name="fullName" id="fullName" placeholder="Enter your name" required>
+                    <input type="text" name="fullName" id="fullName" placeholder="Enter your name" autocomplete="off" required>
                 </div>
                 <div>
                     <label for="memberId">Member ID</label>
-                    <input type="text" name="memberId" id="memberId" placeholder="Mxxxxx" pattern="[A-Za-z]{1}\d{5}" required>
+                    <input type="text" name="memberId" id="memberId" placeholder="Mxxxxx" pattern="[M]{1}\d{5}" autocomplete="off" required>
                 </div>
                 <div>
                     <label for="video">Select video</label>
@@ -40,7 +40,7 @@
                     </span>
                 </div>
                 <div>
-                    <input type="submit" value="Apply Choice" onclick="runValidate (this.form)">
+                    <input type="submit" value="Apply Choice" onclick="return runValidate(this.form)">
                 </div>
             </fieldset>
         </form>

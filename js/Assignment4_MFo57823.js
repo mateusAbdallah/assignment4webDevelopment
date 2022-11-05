@@ -1,6 +1,7 @@
-function runValidate (form){
+function runValidate(form) {
     validateName(form);
-    validateId (form);
+    validateId(form);
+    displayName(form);
     return false;
 }
 
@@ -34,7 +35,10 @@ function validateId (form){
     }
 }
 
-// function getName() {
-//     var name = document.getElementById("fullName");
-// }
+function displayName(form) {
+    var name = form.elements["fullName"].value;
+    var id = form.elements["memberId"].value;
+    
+    document.getElementById("nameCapitalized").innerText = `Hi, ${name.toUpperCase()}(${id})`;
+}
 
