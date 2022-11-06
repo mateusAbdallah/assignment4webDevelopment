@@ -47,7 +47,15 @@
         <form action="" method="get" name="myform">
             <fieldset>
                 <legend>Target Video</legend>  
-                <p id="nameCapitalized"></p>              
+                <p id="nameCapitalized"></p> 
+                <div id="dataList">
+                    <p>Please style the video</p>
+                    <input type="text" name="list" id="list" list="boxBorderList">
+                    <datalist id="boxBorderList">
+                        <option value="Border Radius"></option>
+                        <option value="Box Shadow"></option>
+                    </datalist>
+                </div>            
             </fieldset>
         </form>
     </section>

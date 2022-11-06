@@ -38,7 +38,5 @@ function validateId (form){
 function displayName(form) {
     var name = form.elements["fullName"].value;
     var id = form.elements["memberId"].value;
-    
     document.getElementById("nameCapitalized").innerText = `Hi, ${name.toUpperCase()}(${id})`;
 }
-
