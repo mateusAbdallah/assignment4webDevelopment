@@ -2,6 +2,8 @@ function runValidate(form) {
     validateName(form);
     validateId(form);
     displayName(form);
+    displayVideoDrone(form);
+    displayVideoSalmon(form);
     return false;
 }
 
@@ -35,8 +37,39 @@ function validateId (form){
     }
 }
 
-function displayName(form) {
-    var name = form.elements["fullName"].value;
-    var id = form.elements["memberId"].value;
-    document.getElementById("nameCapitalized").innerText = `Hi, ${name.toUpperCase()}(${id})`;
+function displayName(form) {    
+        var name = form.elements["fullName"].value;
+        var id = form.elements["memberId"].value;
+
+        
+        document.getElementById("nameCapitalized").innerText = "Hi " + name.toUpperCase() + " " + "(ID: " + id + ")";
 }
+
+function displayVideoDrone(form){
+    var videoDrone = form.elements["drone"];
+    
+    if(videoDrone.validity.valueMissing){
+        videoDrone.setCustomValidity("Please select one video");
+        return false;
+    }
+    else {
+        videoDrone.setCustomValidity("");
+        return true;
+    }
+
+}
+
+function displayVideoSalmon(form){
+    var videoSalmon = form.elements["salmon"];
+    
+    if(videoSalmon.validity.valueMissing){
+        videoSalmon.setCustomValidity("Please select one video");
+        return false;
+    }
+    else{
+        videoSalmon.setCustomValidity("");
+        return true;
+    }
+
+}
+
