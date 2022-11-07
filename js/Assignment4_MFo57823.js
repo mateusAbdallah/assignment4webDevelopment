@@ -2,14 +2,14 @@ function runValidate(form) {
     validateName(form);
     validateId(form);
     displayName(form);
-    displayVideoDrone(form);
-    displayVideoSalmon(form);
+    // styleVideoBorder (form);
+    // styleVideoBox (form);
+
     return false;
 }
 
 function validateName (form){
     var name = form.elements["fullName"];
-
     if(name.validity.valueMissing){
         name.setCustomValidity("Please enter your name here");
         return false;
@@ -45,31 +45,16 @@ function displayName(form) {
         document.getElementById("nameCapitalized").innerText = "Hi " + name.toUpperCase() + " " + "(ID: " + id + ")";
 }
 
-function displayVideoDrone(form){
-    var videoDrone = form.elements["drone"];
+function styleVideoBorder (){
+    var vancouverVideo = document.getElementById("vancouverVideo");
+    var borderRadius = document.getElementById("borderRadius");
     
-    if(videoDrone.validity.valueMissing){
-        videoDrone.setCustomValidity("Please select one video");
-        return false;
-    }
-    else {
-        videoDrone.setCustomValidity("");
-        return true;
-    }
-
+    vancouverVideo.style.borderRadius = "5px";
 }
 
-function displayVideoSalmon(form){
-    var videoSalmon = form.elements["salmon"];
+function styleVideoBox (){
+    var vancouverVideo = document.getElementById("vancouverVideo");
+    var boxShadow = document.getElementById("boxShadow");
     
-    if(videoSalmon.validity.valueMissing){
-        videoSalmon.setCustomValidity("Please select one video");
-        return false;
-    }
-    else{
-        videoSalmon.setCustomValidity("");
-        return true;
-    }
-
+    vancouverVideo.style.boxShadow = "1px 1px 3px";
 }
-

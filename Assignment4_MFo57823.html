@@ -35,7 +35,7 @@
                     <span>
                         <input type="radio" name="video" id="salmon" value="salmon">
                         <label for="salmon">Salmon Habitat</label>
-                        <input type="radio" name="video" id="drone" value="drone">
+                        <input type="radio" name="video" id="drone" value="drone" checked>
                         <label for="drone">Vancouver Drone</label>
                     </span>
                 </div>
@@ -52,12 +52,16 @@
                     <p>Please style the video</p>
                     <input type="text" name="list" id="list" list="boxBorderList">
                     <datalist id="boxBorderList">
-                        <option value="Border Radius">Border-Radius</option>
-                        <option value="Box Shadow">Box-Shadow</option>
+                        <option value="Border Radius" id="borderRadius" onclick="styleVideoBorder ()">Border-Radius</option>
+                        <option value="Box Shadow" id="boxShadow" onclick="styleVideoBox ()">Box-Shadow</option>
                     </datalist>
                 </div>       
-                <video id="salmonVideo"></video>   
-                <video id="vancouverVideo"></video>     
+                <div>
+                    <video width="300px" height="300px" controls="controls">
+                        <source src="./media/vancouver.mp4" type="video/mp4" id="vancouverVideo">
+                    </video>
+                </div>
+                   
             </fieldset>
         </form>
     </section>
